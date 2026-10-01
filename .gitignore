@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Compiled output / Build
+dist/
+*/dist/
+build/
+*/build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Database / Storage
+*.sqlite
+*.db
+db.sqlite
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDEs & Tools
+.vscode/
+.idea/
+.openpost/
+.vscode-http/
+scratch/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
