@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
@@ -17,7 +17,14 @@ export class UsersService {
 
 
 
+    find(email: string) {
+        return this.repo.find({ where: { email } })
+    }
 
+
+    update(email: string, newEmail: string, newPassword: string) {
+        return this.repo.update({ email }, { email: newEmail, password: newPassword })
+    }
 
 
 
@@ -25,9 +32,9 @@ export class UsersService {
         return this.repo.findOneBy({ id })
     }
 
-    find(email: string) {
-        return this.repo.find({ where: { email } })
-    }
+
+
 
 
 }
+
